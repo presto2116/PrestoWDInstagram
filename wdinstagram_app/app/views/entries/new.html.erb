@@ -1,0 +1,12 @@
+<div class="create-page">
+<%= form_for @entry do |f| %>
+<p><%= f.label :captions %>
+	<%= f.text_field :captions, :placeholder => "Add a caption" %></p>
+	<p><%= f.label :author %>
+	<%= f.text_field :author, :placeholder => "Author's Username" %></p>
+	<p><%= f.label :photo_url %>
+	<%= f.text_field :photo_url, :placeholder => "Image's URL" %></p>
+	
+	<p><%= f.submit "Submit New Image", id: "submit" %></p>
+<% end %>
+</div>

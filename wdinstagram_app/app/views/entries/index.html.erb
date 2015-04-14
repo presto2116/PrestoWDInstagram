@@ -1,0 +1,16 @@
+<header>
+<h1>Presto's WDInstagram</h1>
+</header>
+<ul>
+
+<% @entries.each do |entry| %>
+<li><a href="/entries/<%= entry.id %>"><%= entry.captions %> </a></li>
+<div class="index">
+<li>Author: <%= entry.author %></li>
+</div>
+<% end %>
+</ul>
+
+<div class="new-entry">
+<a href="/entries/new">Create Entry</a>
+</div>

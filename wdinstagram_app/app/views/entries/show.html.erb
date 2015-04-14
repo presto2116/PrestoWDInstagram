@@ -1,0 +1,14 @@
+<h2><%= @entry.captions %></h2>
+<p><%= @entry.author %></p>
+
+<img src="<%= @entry.photo_url %>" alt="image sumbmission" class="user-image"/>
+<p><%= @entry.created_at.to_date %></p>
+
+<a href="/entries/<%=@entry.id %>/edit">Correct this entry</a>
+<div class="delete-button">
+<%= form_tag entry_path(@entry), method: "delete" do %>
+	<%= submit_tag("Destroy Entry") %>
+	<% end %>
+</div>
+
+<a href="/entries">Back</a>
